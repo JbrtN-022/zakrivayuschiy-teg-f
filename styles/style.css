@@ -15,6 +15,130 @@
 */
 
 .page {
-  min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--page-color);
+  background-size: 1280px 800px;
+  background-image: ;
+  color: var(--text-color);
+}
+
+.dialog {
+  position: absolute;
+  background-color: var(--page-color);
+  padding: 30px;
+  border: var(--text-color) 2px solid;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(7px);
+}
+
+.dialog__container {
+  color: var(--text-color);
+  font-family: var(--font-family-title);
+  max-width: 293px;
+  min-width: 257px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+  gap: 30px;
+  display: grid;
+  justify-items: center;
+}
+
+.dialog__content {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dialog-floppy {
+  fill: var(--text-color)
+}
+
+.button {
+  background-color: transparent;
+  border: var(--text-color) 2px solid;
+  display: flex;
+  padding: 9px 17px;
+}
+
+.header {
+  border: var(--text-color) 2px solid;
+  font-family: var(--font-family-title), sans-serif;
+  margin-top: 100px;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.header-inf {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 25px;
+}
+
+.header-title {
+  margin-top: 138px;
+  font-size: 65px;
+  line-height: 65px;
+}
+.header-description{
+  font-size: 23px;
+}
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.theme-menu__list{
+  gap: 14px;
+  display: grid;
+}
+.theme-menu__button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
+
+
+.main {
+  display: grid;
+  margin-top: 100px;
+  gap: 50px;
+  font-family: var(--font-family-main), sans-serif;
+}
+
+.card {
+  border: var(--text-color) 2px solid;
+}
+
+.main-title {
+  font-weight: 785;
+  font-size: 18px;
+}
+
+.main-container{
+  display: grid;
+  padding: 25px;
+  gap: 25px;
+}
+
+.main-description {
+  font-weight: 465;
+  font-size: 18px;
+  line-height: 21px;
+  gap: 27px;
+  display: grid;
+}
+.card__icon-button{
+  background-color: transparent;
+  border: none;
+}
+.main-buttom{
+  display: flex;
+  font-family:var(--font-family-title);
+  gap: 12px;
+  justify-content: flex-end;
 }

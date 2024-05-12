@@ -4,3 +4,33 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+.page.theme-dark {
+    --font-family-main:'Inter-Variable';
+    --font-family-title:'PressStart2P-Regular';
+    --text-color:#00CC14;
+    --page-color:#000;
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --font-family-main:'Inter-Variable';
+        --font-family-title:'PressStart2P-Regular';
+        --text-color:#00CC14;
+        --page-color:#000; 
+    }
+}
+.page.theme-light {
+    --font-family-main:'Inter-Variable';
+    --font-family-title:'PressStart2P-Regular';
+    --text-color:#000;
+    --page-color:#fff;
+}
+
+@media (prefers-color-scheme: light){
+   :root{
+        --font-family-main:'Inter-Variable';
+        --font-family-title:'PressStart2P-Regular';
+        --text-color:#000;
+        --page-color:#fff;
+   } 
+}
