@@ -16,21 +16,26 @@
 
 .page {
   min-block-size: 100dvb;
-  background-color: var(--page-color);
-  background-size: 1280px 800px;
+  background-image:
+    repeating-linear-gradient(90deg, var(--page-color), var(--page-color) 2px, transparent 2px, transparent 4px),
+
+    repeating-linear-gradient(180deg, var(--page-color), var(--page-color) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(180deg, var(--gradient-color-top) 0.01%, var(--gradient-color-bottom));
+  background-attachment: fixed;
+  min-block-size: 100vh;
   color: var(--text-color);
 }
 
 .dialog {
-  position: absolute;
+  position: fixed;
   background-color: var(--page-color);
   padding: 30px;
   border: var(--text-color) 2px solid;
+  bottom: 28em;
 }
 
-dialog::backdrop {
+dialog::backdrop{
   background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
 }
 
 .dialog__container {
@@ -41,15 +46,16 @@ dialog::backdrop {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 150%;
- 
+
   display: block;
   justify-items: center;
 }
 
-.dialog__text{
+.dialog__text {
   width: 234px;
 }
-.dialog__button{
+
+.dialog__button {
   margin-top: 30px;
   width: 100%;
   justify-content: center;
@@ -64,15 +70,19 @@ dialog::backdrop {
 .dialog-floppy {
   fill: var(--text-color)
 }
-.floppy{
+
+.floppy {
   color: var(--text-color);
 }
+
 .button {
   background-color: transparent;
   border: var(--text-color) 2px solid;
   display: flex;
   padding: 9px 17px;
+  font-family: var(--font-family-title), sans-serif;
 }
+
 
 .header {
   border: var(--text-color) 2px solid;
@@ -80,105 +90,298 @@ dialog::backdrop {
   margin-top: 100px;
   text-transform: uppercase;
   margin-bottom: 100px;
+  background-color: var(--page-color);
 }
 
 .header-inf {
   display: grid;
   gap: 20px;
   justify-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .header-title {
-  margin-top: 138px;
-  font-size: 65px;
+  margin-top: 137px;
   line-height: 65px;
+  font-size: 65px;
 }
-.header-description{
+
+.header-description {
   font-size: 23px;
 }
+
 .header__theme-menu {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  left: 10px;
+  position: relative;
 }
-.theme-menu__list{
-  gap: 14px;
+
+.theme-menu__list {
+  gap: 10px;
   display: grid;
 }
+
+/*////////////анимация кнопок тем///////////////*/
 .theme-menu__button {
+  position: relative;
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+
 }
 
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  left: -15px;
+  opacity: 0.6;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.theme-menu__button::after {
+  content: '';
+  scale: 0;
+  display: block;
+  height: 2px;
+  margin-top: 1px;
+  background-color: var(--text-color);
+  scale: 0.3s ease, background-color 0.3s ease;
+  transform-origin: -10px;
+
+}
+
+.theme-menu__button:focus-visible::after {
+  scale: 1;
+
+}
+
+/*///////////////////*/
+svg {
+  fill: var(--text-color)
+}
 
 .main {
   display: grid;
-  margin-top: 100px;
   gap: 50px;
   font-family: var(--font-family-main), sans-serif;
 }
 
 .card {
   border: var(--text-color) 2px solid;
+  background-color: var(--page-color);
+  display: grid;
+  position: relative;
 }
 
 .main-title {
-  font-weight: 785;
+  font-weight: var(--l);
   font-size: 18px;
+  line-height: 19px;
+  padding: 8px 9px;
 }
-/*///////////
-.main-image{
+
+/*////////картинки//////////*/
+.main-image {
   outline: var(--text-color) 2px solid;
   outline-offset: -2px;
+  display: flex;
+  object-fit: cover;
+  justify-content: flex-end;
 }
-.gray{
 
+.main-image-description {
+  font-family: var(--font-family-title);
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--page-color);
+  position: absolute;
+  top: 58px;
+  right: 25px;
+  opacity: 50%;
 }
-.purple{
 
+.image {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
-.gray-purrple{
 
+.gray {
+  filter: contrast(50%);
 }
-.invers{
 
+.saturate {
+  filter: saturate(400%);
 }
-.brown{
 
+.gray-purrple {
+  filter: saturate(400%);
 }
-.blur{
 
+.invert {
+  filter: invert(100%)
 }
-.blur-brown{
 
+.septia {
+  filter: sepia(80%);
 }
-///////*/
-.card__like-button{
+
+.blur {
+  filter: blur(0.2rem);
+}
+
+.blur-brown {
+  filter: contrast(10%);
+}
+/*////////////анимация кнопrb like///////////////*/
+.card__like-button {
   width: 130px;
+  height:38px;
+  border: solid 2px var(--text-color);
   justify-content: center;
+  transition: box-shadow 0.3s;
+  padding: 4px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
-.main-container{
+
+.card__like-button::after{
+  content: '';
+  display: block;
+  position: absolute;
+  transform: translate(-100%);
+  height: 105%;
+  width: 100%;
+  background-color: var(--text-color);
+  transition:transform 0.5s ease-in-out;
+}
+
+.card__like-button:focus{
+  outline: none;
+}
+
+.card__like-button:focus-visible{
+  box-shadow: 2px 2px 0 0 var(--text-color);
+  transition: box-shadow 0.3s;
+}
+
+.card__like-button:hover::after{
+  transform: translate(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button__text {
+  font-size: 14px;
+}
+/*////////////////////*/
+
+.main-container {
   display: grid;
   padding: 25px;
   gap: 25px;
 }
 
 .main-description {
-  font-weight: 465;
+  font-weight: var(--s);
   font-size: 18px;
   line-height: 21px;
   gap: 27px;
   display: grid;
 }
-.card__icon-button{
+
+.card__icon-button {
   background-color: transparent;
   border: none;
 }
-.main-buttom{
+
+button {
+  cursor: pointer;
+}
+
+.main-buttom {
   display: flex;
-  font-family:var(--font-family-title);
-  gap: 12px;
+  font-family: var(--font-family-title);
+  gap: 0px;
   justify-content: flex-end;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__button {
+  background-color: var(--page-color);
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+  margin-bottom: 103px;
+}
+
+.flooppy-footer{
+  fill: var(--text-color);
+}
+/*///////размер экрана /////////*/
+
+@media (width < 700px) {
+  .dialog {
+    bottom: 20em;
+  }
+
+  .header-title {
+    font-size: 49px;
+    margin-top: 114px;
+  }
+
+  .header-inf {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .header__theme-menu {
+    margin-bottom: 22px;
+  }
+
+  .header-description {
+    font-size: 14px;
+  }
+
+  .main-image-description {
+    top: 48px;
+    right: 10px;
+  }
+
+  .button {
+    display: grid;
+    justify-items: center;
+  }
+
+  .footer__button {
+    padding: 15px 20px;
+  }
+
+  .footer_svg {
+    width: 28px;
+    height: 28px;
+  }
 }
