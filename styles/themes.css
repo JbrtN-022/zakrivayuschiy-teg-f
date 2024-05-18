@@ -6,7 +6,7 @@
 */
 :root.theme-dark {
     --font-family-main: 'Inter-Variable';
-    --font-family-title: 'PressStart2P-Regular';
+    --font-family-title: 'PressStart2P';
     --text-color: #00CC14;
     --page-color: #000;
     --gradient-color-top:#007F0C;
@@ -17,7 +17,7 @@
 @media (prefers-color-scheme: dark) {
     :root.theme-dark {
         --font-family-main: 'Inter-Variable';
-        --font-family-title: 'PressStart2P-Regular';
+        --font-family-title: 'PressStart2P';
         --text-color: #00CC14;
         --page-color: #000;
         --gradient-color-top:#007F0C;
@@ -27,7 +27,7 @@
 
 :root.theme-light {
     --font-family-main: 'Inter-Variable';
-    --font-family-title: 'PressStart2P-Regular';
+    --font-family-title: 'PressStart2P';
     --text-color: #000;
     --page-color: #fff;
     --gradient-color-top:#E7E7E7;
@@ -37,7 +37,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --font-family-main: 'Inter-Variable';
-        --font-family-title: 'PressStart2P-Regular';
+        --font-family-title: 'PressStart2P';
         --text-color: #000;
         --page-color: #fff;
         --gradient-color-top:#E7E7E7;
