@@ -12,3 +12,22 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes heard {
+from {
+    .contour{
+        fill:var(--color-contour)
+    }
+    .main-body{
+        fill:none;
+        color: none;
+    }
+    .core{
+        fill:none;
+        color: none;
+    }
+    .sparks{
+        fill:none;
+        color: none;
+    }
+}
+}
