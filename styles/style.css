@@ -117,13 +117,14 @@ dialog::backdrop{
   justify-content: center;
   margin-bottom: 20px;
   font-size: 14px;
-  left: 10px;
   position: relative;
 }
 
 .theme-menu__list {
   gap: 10px;
   display: grid;
+  left: 10px;
+  position: relative;
 }
 
 /*////////////анимация кнопок тем///////////////*/
@@ -369,14 +370,13 @@ button {
   position: absolute;
   transform: translate(-120%);
   height: 105%;
-  width: 100%;
+  width: 115%;
   background-color: var(--text-color);
   transition:transform 0.5s ease-in-out;
 }
 
 .footer__button:hover::after{
   transform: translate(-20px);
-  transition: transform 0.5s ease-in-out;
 }
 /*///////////////////////////////////*/
 .flooppy-footer{
