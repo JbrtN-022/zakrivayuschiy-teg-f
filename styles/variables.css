@@ -3,7 +3,10 @@
     --font-family-main: 'Inter-Variable';
     --font-family-title: 'PressStart2P';
     --text-color: #00CC14;
+    --color-heart:#FF0000;
     --page-color: #000;
+    --button-hover-color:#00CC14;
+    --contour-heart: #00CC14;
     --gradient-color-top:#007F0C;
     --gradient-color-bottom:#004306;
     --color-contour:#000;
