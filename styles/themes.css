@@ -8,12 +8,12 @@
     --font-family-main: 'Inter-Variable';
     --font-family-title: 'PressStart2P';
     --contour-heart: #00CC14;
-    --color-heart:#FF0000;
+    --color-heart: #FF0000;
     --text-color: #00CC14;
     --page-color: #000;
-    --button-hover-color:#00CC14;
-    --gradient-color-top:#007F0C;
-    --gradient-color-bottom:#004306;
+    --button-hover-color: #00CC14;
+    --gradient-color-top: #007F0C;
+    --gradient-color-bottom: #004306;
 }
 
 
@@ -22,12 +22,12 @@
         --font-family-main: 'Inter-Variable';
         --font-family-title: 'PressStart2P';
         --contour-heart: #00CC14;
-        --color-heart:#FF0000;
+        --color-heart: #FF0000;
         --text-color: #00CC14;
         --page-color: #000;
-        --button-hover-color:#00CC14;
-        --gradient-color-top:#007F0C;
-        --gradient-color-bottom:#004306;
+        --button-hover-color: #00CC14;
+        --gradient-color-top: #007F0C;
+        --gradient-color-bottom: #004306;
     }
 }
 
@@ -35,12 +35,12 @@
     --font-family-main: 'Inter-Variable';
     --font-family-title: 'PressStart2P';
     --contour-heart: #000;
-    --color-heart:#FF0000;
+    --color-heart: #FF0000;
     --text-color: #000;
     --page-color: #fff;
-    --button-hover-color:#fff;
-    --gradient-color-top:#E7E7E7;
-    --gradient-color-bottom:#1A1A1A;
+    --button-hover-color: #fff;
+    --gradient-color-top: #E7E7E7;
+    --gradient-color-bottom: #1A1A1A;
 }
 
 @media (prefers-color-scheme: light) {
@@ -48,11 +48,11 @@
         --font-family-main: 'Inter-Variable';
         --font-family-title: 'PressStart2P';
         --contour-heart: #000;
-        --color-heart:#FF0000;
+        --color-heart: #FF0000;
         --text-color: #000;
         --page-color: #fff;
-        --button-hover-color:#fff;
-        --gradient-color-top:#E7E7E7;
-        --gradient-color-bottom:#1A1A1A; 
+        --button-hover-color: #fff;
+        --gradient-color-top: #E7E7E7;
+        --gradient-color-bottom: #1A1A1A;
     }
 }

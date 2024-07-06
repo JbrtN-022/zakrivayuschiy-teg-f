@@ -12,35 +12,40 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-@keyframes activate{
+@keyframes activate {
     from {
         left: -15px;
     }
+
     to {
-        left: -10px; 
+        left: -10px;
     }
 }
 
-@keyframes heart-size{
-    0%{
+@keyframes heart-size {
+    0% {
         transform: scaleX(1);
     }
-    50%{
+
+    50% {
         scale: 1.5;
     }
-    100%{
+
+    100% {
         scale: 1;
     }
 }
 
-@keyframes sparks{
-    0%{
+@keyframes sparks {
+    0% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
