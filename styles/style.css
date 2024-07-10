@@ -238,12 +238,6 @@
   text-shadow: 1px var(--page-color);
 }
 
-@supports (-webkit-text-stroke-color: transparent) {
-  .main-image-description {
-    -webkit-text-stroke-color: transparent;
-  }
-}
-
 @supports ((text-stroke: 1px var(--page-color)) or (-webkit-text-stroke: 1px var(--page-color))) {
   .main-image-description {
     -webkit-text-stroke: 1px var(--page-color);
