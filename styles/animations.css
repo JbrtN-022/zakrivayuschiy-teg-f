@@ -14,11 +14,11 @@
 */
 @keyframes activate {
     from {
-        left: -15px;
+        transform: translateX(0);
     }
 
     to {
-        left: -10px;
+        transform: translateX(4px);
     }
 }
 

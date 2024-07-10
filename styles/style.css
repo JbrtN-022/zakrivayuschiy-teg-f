@@ -22,6 +22,7 @@
   background-attachment: fixed;
   min-block-size: 100vh;
   color: var(--text-color);
+  font-variation-settings: 'wght' var(--s);
 }
 
 /*///////////////кнопка//////////////////*/
@@ -151,6 +152,7 @@
   animation-name: activate;
   animation-iteration-count: infinite;
   animation-duration: 2s;
+  inset-inline-start: -17px;
 }
 
 .theme-menu__button:hover {
@@ -180,7 +182,7 @@
   transform: scale(1);
 }
 
-/*///////////////////*/
+/*///////////////////////*/
 
 .main {
   display: grid;
@@ -196,7 +198,7 @@
 }
 
 .main-title {
-  font-weight: var(--l);
+  font-variation-settings: 'wght' var(--l);
   font-size: 18px;
   line-height: 21px;
   padding: 6px 9px;
@@ -233,11 +235,19 @@
   top: 58px;
   right: 25px;
   opacity: 0.5;
+  text-shadow: 1px var(--page-color);
+}
+
+@supports (-webkit-text-stroke-color: transparent) {
+  .main-image-description {
+    -webkit-text-stroke-color: transparent;
+  }
 }
 
 @supports ((text-stroke: 1px var(--page-color)) or (-webkit-text-stroke: 1px var(--page-color))) {
   .main-image-description {
     -webkit-text-stroke: 1px var(--page-color);
+    text-stroke: 1px var(--page-color);
     text-shadow: none;
   }
 }
@@ -246,7 +256,8 @@
   position: relative;
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  min-height: 375px;
+  aspect-ratio: 1/1;
   overflow: hidden;
 }
 
@@ -316,17 +327,18 @@
 
 /*///////////////////heart////////////////////*/
 
-.main-body {
-  fill: var(--contour-heart);
-  opacity: 0;
+.like-icon .main-body {
+  fill: var(--page-color);
+  transition-timing-function: linear;
 }
 
-.core {
-  fill: var(--contour-heart);
-  opacity: 0;
+.like-icon .core {
+  transition-timing-function: linear;
+  fill: var(--page-color);
 }
 
-.contour {
+.like-icon .contour {
+  transition-timing-function: linear;
   fill: var(--contour-heart);
 }
 
@@ -336,14 +348,15 @@
 }
 
 .like-icon:hover .core {
-  opacity: 1;
-  transition: opacity;
+  fill: var(--contour-heart);
+  transition: fill;
   transition-duration: 0.3s;
+  transition-delay: 0.03s;
 }
 
 .like-icon:hover .main-body {
-  opacity: 1;
-  transition: opacity;
+  fill: var(--contour-heart);
+  transition: fill;
   transition-delay: 0.05s;
   transition-duration: 0.3s;
 }
