@@ -27,7 +27,7 @@
 
 /*///////////////кнопка//////////////////*/
 .button {
-  background-color: transparent;
+  background-color: var(--page-color);
   border: var(--text-color) 2px solid;
   display: flex;
   padding: 9px 17px;
@@ -35,7 +35,6 @@
   align-items: center;
   cursor: pointer;
   transition: box-shadow 0.3s;
-  z-index: 0;
   overflow: hidden;
   position: relative;
   justify-content: center;
@@ -54,7 +53,7 @@
   content: '';
   display: block;
   position: absolute;
-  transform: translate(-120%);
+  transform: translate(-100%);
   height: 115%;
   width: 115%;
   background-color: var(--text-color);
@@ -64,16 +63,15 @@
 .button:hover::after {
   transform: translate(-20px);
   color: var(--page-color);
-
 }
 
-.button:hover .button__text {
+.button .button__text {
   mix-blend-mode: difference;
   color: var(--button-hover-color);
   z-index: 1;
 }
 
-.button:hover .floppy {
+.button .floppy {
   mix-blend-mode: difference;
   color: var(--button-hover-color);
   z-index: 1;
@@ -81,7 +79,6 @@
 
 .button__text {
   font-size: 14px;
-  z-index: 1;
 }
 
 .button__text::after {
@@ -324,16 +321,20 @@
 .like-icon .main-body {
   fill: var(--page-color);
   transition-timing-function: linear;
+  
 }
 
 .like-icon .core {
   transition-timing-function: linear;
   fill: var(--page-color);
+  transition-duration: 0.3s;
+  transition-delay: 0.03s;
 }
 
 .like-icon .contour {
   transition-timing-function: linear;
   fill: var(--contour-heart);
+  transition-duration: 0.1s;
 }
 
 .sparks {
@@ -345,7 +346,6 @@
   fill: var(--contour-heart);
   transition: fill;
   transition-duration: 0.3s;
-  transition-delay: 0.03s;
 }
 
 .like-icon:hover .main-body {
@@ -406,7 +406,6 @@
 }
 
 .footer__button {
-  background-color: var(--page-color);
   gap: 8px;
   margin-bottom: 103px;
   padding: 15px 20px;
@@ -439,7 +438,6 @@ dialog::backdrop {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 150%;
-
   display: block;
   justify-items: center;
 }
